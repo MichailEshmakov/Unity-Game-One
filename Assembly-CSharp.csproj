@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\ExitButton.cs" />
     <Compile Include="Assets\Scripts\CreditsButton.cs" />
+    <Compile Include="Assets\Scripts\CloseMenuButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
