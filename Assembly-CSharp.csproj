@@ -53,14 +53,18 @@
     <UnityVersion>2021.1.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UI\ButtonBehaviour.cs" />
     <Compile Include="Assets\Scenes\Typed\Game.cs" />
-    <Compile Include="Assets\Scripts\ExitToMenuButton.cs" />
+    <Compile Include="Assets\Scripts\UI\CreditsButton.cs" />
+    <Compile Include="Assets\Scripts\TableMover.cs" />
+    <Compile Include="Assets\Scripts\CookieRotator.cs" />
+    <Compile Include="Assets\Scripts\UI\PlayButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ExitToMenuButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ExitButton.cs" />
     <Compile Include="Assets\Scenes\Typed\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
-    <Compile Include="Assets\Scripts\PlayButton.cs" />
-    <Compile Include="Assets\Scripts\ExitButton.cs" />
-    <Compile Include="Assets\Scripts\CreditsButton.cs" />
-    <Compile Include="Assets\Scripts\CloseMenuButton.cs" />
+    <Compile Include="Assets\Scripts\UI\CloseMenuButton.cs" />
+    <Compile Include="Assets\Scripts\SpeedKeeper.cs" />
+    <Compile Include="Assets\Scripts\Mover.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
