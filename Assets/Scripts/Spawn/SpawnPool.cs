@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpawnPool : ObjectPool
 {
-    [SerializeField] private SpeedKeeper _speedKeeper;
+    [SerializeField] private GlobalSpeed _globalSpeed;
     [SerializeField] private int _minQueueLength;
     [SerializeField] private int _maxQueueLength;
 
@@ -30,7 +30,7 @@ public class SpawnPool : ObjectPool
         {
             foreach (Mover mover in movers)
             {
-                mover.Init(_speedKeeper.Speed);
+                mover.Init(_globalSpeed.Value);
             }
         }
     }

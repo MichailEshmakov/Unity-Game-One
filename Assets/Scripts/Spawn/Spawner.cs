@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private SpeedKeeper _speedKeeper;
+    [SerializeField] private GlobalSpeed _globalSpeed;
     [SerializeField] private SpawnPool _cupSpawnPool;
     [SerializeField] private SpawnPool _coinSpawnPool;
     [SerializeField] private Transform _spawnPoint;
@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        _elapsedTime += Time.deltaTime * _speedKeeper.Speed;
+        _elapsedTime += Time.deltaTime * _globalSpeed.Value;
 
         if (_elapsedTime >= _currentDelay)
         {

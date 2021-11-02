@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(RawImage))]
 public class TableMover : MonoBehaviour
 {
-    [SerializeField] private SpeedKeeper _speedKeeper;
+    [SerializeField] private GlobalSpeed _globalSpeed;
     [SerializeField] private float _speedCoefficient;
 
     private RawImage _image;
@@ -20,7 +20,7 @@ public class TableMover : MonoBehaviour
 
     private void Update()
     {
-        _imagePositionX += _speedCoefficient * _speedKeeper.Speed * Time.deltaTime;
+        _imagePositionX += _speedCoefficient * _globalSpeed.Value * Time.deltaTime;
         if (_imagePositionX > 1)
             _imagePositionX %= 1;
 

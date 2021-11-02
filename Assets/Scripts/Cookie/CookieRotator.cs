@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CookieRotator : MonoBehaviour
 {
-    [SerializeField] private SpeedKeeper _speedKeeper;
+    [SerializeField] private GlobalSpeed _globalSpeed;
     [SerializeField] private float _speedCoefficient;
     [SerializeField] private float _radius;
 
@@ -15,7 +15,7 @@ public class CookieRotator : MonoBehaviour
         if (_radius != 0)
         {
             float perimeter = 2 * Mathf.PI * _radius;
-            _rotationSpeed = 360 * _speedKeeper.Speed * _speedCoefficient / perimeter;
+            _rotationSpeed = 360 * _globalSpeed.Value * _speedCoefficient / perimeter;
         }
 
     }
