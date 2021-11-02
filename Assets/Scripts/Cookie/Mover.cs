@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] private SpeedKeeper _speedKeeper;
     [SerializeField] private float _speedCoefficient;
     [SerializeField] private Vector2 _direction;
 
+    private float _globalSpeed = 1;
+
     private void Update()
     {
-        transform.Translate(_direction * _speedKeeper.Speed * _speedCoefficient * Time.deltaTime);
+        transform.Translate(_direction * _globalSpeed * _speedCoefficient * Time.deltaTime);
+    }
+
+    public void Init(float globalSpeed)
+    {
+        _globalSpeed = globalSpeed;
     }
 }
