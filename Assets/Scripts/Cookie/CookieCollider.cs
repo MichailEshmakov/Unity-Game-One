@@ -15,5 +15,10 @@ public class CookieCollider : MonoBehaviour
             CoinPicked?.Invoke();
             coin.gameObject.SetActive(false);
         }
+
+        if (collision.TryGetComponent(out Cup cup))
+        {
+            Smashed?.Invoke();
+        }
     }
 }
